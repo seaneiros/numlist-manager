@@ -1,0 +1,2 @@
+export { SelectedItemsListContainer as List }      from './containers/selectedItems.list.container';
+export { SelectedItemsFilterContainer as Filters } from './containers/selectedItems.filter.container';

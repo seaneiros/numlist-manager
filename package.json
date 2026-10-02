@@ -1,0 +1,13 @@
+{
+  "name": "sorter",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "build:common": "npm run build -w @sorter/common",
+    "dev:server": "npm run build:common && npm run dev -w @sorter/server",
+    "dev:client": "npm run build:common && npm run dev -w @sorter/client",
+    "build": "npm run build -w @sorter/common && npm run build -w @sorter/server && npm run build -w @sorter/client",
+    "typecheck": "tsc -b packages/common packages/server && npm run typecheck -w @sorter/client"
+  }
+}
