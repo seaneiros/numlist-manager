@@ -29,6 +29,8 @@ export const Layout = () => {
           <AvailableItems.Filters />
           <Spacer />
           <AvailableItems.List height={tableHeight} />
+          <Spacer />
+          <AvailableItems.Add />
         </Col>
         <Col xs={24} lg={12}>
           <SelectedItems.Filters />

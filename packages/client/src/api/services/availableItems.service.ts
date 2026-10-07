@@ -15,4 +15,13 @@ export class AvailableItemsApiService extends ApiService {
       abort,
     ];
   }
+
+  addAvailableItem(value: number): ApiIntent<void> {
+    const [ addItem, abort ] = this.createPostIntent<void>('/items', { value });
+
+    return [
+      () => addItem().then(() => void(0)),
+      abort,
+    ];
+  }
 }
